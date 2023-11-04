@@ -135,7 +135,7 @@
                     //recorriendo todos los rubros siempre y cuando sean el mismo elem contable 
                     while ($elementoContableActual == $cuentas[$contador]["clasificacion"]) { ?>
 
-                            <tr class="rubrosCuenta <?php echo ""; ?> hide-element">
+                            <tr class="rubrosCuenta hide-element">
                                 <td><?php echo $codigoRubroActual; ?></td>
                                 <td><?php echo $rubroActual; ?></td>
                                 <td class='extends-rubro'>
@@ -145,12 +145,12 @@
                             </tr>
                         
                         <?php 
-                        
+                        $imagen = "";
                         while ($rubroActual == $cuentas[$contador]["subtipo"]) {
                                 $codigoCuenta = $cuentas[$contador]["codigo"];
                                 $bold = strlen($codigoCuenta) == 4 ? "rubrosCuenta" : "";
-                                $imagen = "";
-                                if(strlen($cuentas[$contador]["codigo"]) < $codigoAnterior){
+                                
+                                if($codigoAnterior < strlen($cuentas[$contador]["codigo"])){
                                     $imagen = "visibility_off";
                                     $codigoAnterior = $cuentas[$contador]["codigo"];
                                 }
