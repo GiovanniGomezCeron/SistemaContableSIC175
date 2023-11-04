@@ -1,0 +1,72 @@
+#seccionAdvertencia{
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 10000;
+    background: rgba(255, 255, 255, 0.95);
+    height:100vh;
+    text-align: center;
+}
+
+#seccionMainAdvertencia{
+    position: absolute;
+    z-index: 10000;
+    box-shadow: 1px 2px 40px 2px #ccc,1px 2px 40px 2px #ccc;
+    width: 40%;
+    display: block;
+    margin: auto;
+    padding-bottom: 5px;
+    left: 30%;
+}
+#seccionImgAlerta{
+    padding:5px;
+}
+#imgAlerta{
+    display: inline-block;
+    width: 100px;
+    height: 100xpx;
+
+}
+
+#mensajeAdvertencia{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top:0;
+}
+
+#opcionDenegar{
+    background-color: #039be5;
+    padding:5px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 150px;
+    color:white;
+    cursor: pointer;
+    box-shadow: 1px 0px 5px 2px #ccc;
+}
+
+#opcionAceptar{
+    background-color:  #f43646;
+    padding:5px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 150px;
+    color:white;
+    margin-bottom: 20px;
+    cursor: pointer;
+    box-shadow: 1px 0px 5px 2px #ccc;
+}
+
+#opcionDenegar span,#opcionAceptar span{
+    display: inline-block;
+    vertical-align: top;
+}
+
+#opcionDenegar span:last-child{
+   font-weight: bold;
+}
+
+#opcionAceptar span:last-child{
+    font-weight: bold;
+ }

@@ -1,0 +1,1757 @@
+.tarjeta{
+    width:300px;
+    height: 170px;
+    padding: 5px;
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+    box-sizing: border-box;
+}   
+
+.card-image{
+    z-index: 0;
+}
+
+.content .nav, .barraLateral .nav{
+    height: 63px;
+    border-bottom: 1px solid #ccc
+}
+.tarjeta .card-image img.image.activator{
+    display: inline-block;
+    width:100px;
+    height: 90px;
+}   
+
+.tarjeta p{
+    padding: 4px;
+    margin: 0;
+    border-top:1px solid #ccc;
+}
+
+.menu{
+    background-color:#eaebe7; 
+    border-bottom:1px solid #ccc;
+    width: 100%;
+}
+
+.content{
+    display: inline-block;
+    text-align: center;
+    width: 80%;
+    margin-left:-3px;
+    position: relative;
+    
+}
+
+.barraLateral{
+    width: 19%;
+    display: inline-block;
+    vertical-align: top;
+    height: 100vh;
+    border-right:1px solid #ccc;
+}
+
+
+.barraLateral img{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 5px;
+    margin: 3px;
+}
+
+.barraLateral a{
+    display: inline-block;
+    vertical-align: top;
+    line-height: 45px;
+    color:black;
+}
+
+
+
+.barraLateral > ul > li{
+    margin: 12px 1px;
+    cursor: pointer;
+}
+
+
+.barraLateral > ul section li:hover{
+  background-color:#ddd;
+  transition: all ease 1s;
+}
+
+
+.barraLateral .nav{
+    background-color:#64b5f6;
+}
+
+.barraLateral nav p{
+    text-align: center;
+    margin: 0;
+   
+    padding: 0;
+}
+
+.subnivel{
+    width: 80%;
+    float: right;
+    transition: display ease 5s;
+}
+
+.hide{
+    display: none !important;
+}
+
+
+.show{
+    display: block;
+    transition: all 1s ease;
+}
+
+.logo,.perfil{
+    width: 50px;
+    height:50px;
+    float: left;
+    display: inline-block;
+    line-height: 40px;
+}
+
+.perfil{
+    float:right;
+}
+.content .nav{
+    padding: 5px;
+    z-index: 3;
+    position: relative;
+}
+
+.content .nav span{
+    float: right;
+    line-height: 50px;
+    font-weight: bold;
+    margin: 3px;
+}
+
+.barraLateral i{
+    color:#039be5;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 45px;
+}
+
+.tarjeta-horizontal div{
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    height: 150px
+}
+
+.tarjeta-horizontal div:nth-child(2){
+    margin-left:-5px; 
+   
+}
+
+.tarjeta-horizontal#movimientos{
+   width: 625px;
+   height: 335px;
+   vertical-align: top;
+}
+
+.tarjeta-horizontal#movimientos section.menubar{
+    width: 100%;
+   /* background: #ccc;*/
+   border-bottom:1px solid #ccc;     
+  }
+
+  .tarjeta-horizontal#movimientos section ol{
+      text-align: left;    
+      display: inline-block;
+      vertical-align: top;
+  }
+
+  .tarjeta-horizontal#movimientos section ol:last-child{
+    list-style-type: none;
+}
+
+  
+  .tarjeta-horizontal#movimientos section ol li span{
+      display: inline-block;
+    color: #039be5;
+    height: 4px;
+}
+
+  .tarjeta-horizontal#movimientos section ol li{
+    padding:4px; 
+}
+
+.tarjeta-horizontal#movimientos span.nOperaciones{
+    background: #fba32f;
+    display: inline-block;
+    vertical-align: top;
+    line-height:8px;
+    color:white;
+    width:20px;
+    height: 20px;
+    text-align: center;
+    margin-bottom:0;
+    border-radius:50%;
+  }
+
+  .tarjeta-horizontal#movimientos .content-main{
+      height: 285px;
+      overflow-y: scroll; 
+      border:none;
+  }
+
+  .lastTransImg{
+      display: inline-block;
+      vertical-align: top;
+      width: 24px;
+      height:24px;
+  }
+  .tarjeta-horizontal#movimientos span.nAvisos{
+    background:#f43646;
+    display: inline-block;
+    vertical-align: top;
+    line-height:8px;
+    color:white;
+    width:20px;
+    height: 20px;
+    text-align: center;
+    margin-bottom:0;
+    border-radius:50%;
+  }
+
+.tarjeta-horizontal#movimientos span{
+   display: inline-block;
+   margin:5px;
+   margin-top:0; 
+   margin-left:7px; 
+   cursor:pointer;
+   padding: 5px;
+   border-radius: 2px;
+   font-weight: bold;
+ }
+
+ .activated{
+     border-bottom: 4px solid #039be5;
+ }
+ 
+
+.tarjeta-horizontal div:first-child{
+    background: rgb(223, 222, 222);
+    /*box-shadow: 0px 1px 1px 1px #bbb,
+                0px -1px 0px 0px #bbb;*/
+    border-radius: 3px;
+    border-left: 1px solid #ddd;
+}
+
+
+.content .tarjeta-horizontal .card-image img.image{
+    display:block;
+    margin:20% auto;
+}
+
+.cantidadItems{
+    display: block;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.cantidadMonto{
+    display: block;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.barraLateral p{
+    padding: 0;
+    margin: 0;
+    color:white;
+    font-weight:bold;
+    text-align:center;
+    font-size:30px;
+    text-shadow: 1px 1px 5px black;
+}
+
+.sct-user img, .sct-user img p {
+margin: 0;
+padding: 0;
+}
+
+.content .nav i{
+    float: right;
+    line-height: 55px;
+    cursor: pointer;
+}
+
+.nivelNavegacion{
+    padding: 10px;
+    width: 100%;
+    text-align:left;
+    position: relative;
+    z-index: 3;
+}
+
+.nivelNavegacion i{
+    display: inline-block;
+    line-height: 20px;
+    vertical-align: top;
+}
+
+/*FORMULARIO DE INGRESO DE CUENTAS*/
+#seccionFormCuenta{
+    position: absolute;
+    width:100%;
+    height: 100vh;
+    top:0;
+    z-index: 2;
+    background: white;
+    left:0;
+}
+
+.formCuenta{
+    height: 300px;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: top;
+    margin: auto;
+    position: relative;
+    width: 70%;
+    margin-left: -5px;
+    box-shadow: 1px 1px 4px #eee;    
+    
+}
+
+.formCuentaStn{
+    text-align: center;
+    border:1px solid #ccc;
+    width: 60%;
+    border-radius: 5px;
+    margin: auto;
+    box-shadow: 1px 1px 15px #ccc;
+    position: absolute;
+    top:20%;
+    left:20%;
+    z-index: 1000;
+}
+
+.btnSubmit{
+    background: #0da2ec;
+    color:white;
+    font-weight: bold;
+    appearance:none;
+    padding:8px;
+    border-radius: 4px;
+    border: 1px solid #0da2ec;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right:0;
+    margin: 10px;
+}
+
+.tituloCuentas{
+    background: #fba32f;
+    /*background: #ecb910;*/
+    color: white;
+    margin: 0;
+    padding: 4px;
+    height: 30px;
+    font-weight:bold;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.formCuentaStn .imgForm{
+    width: 130px;
+    display: inline-block;
+    height: 130px;
+    margin-top: 30px;
+    
+}
+
+.sectionImageFormCuenta{
+    border-right: 1px solid #ccc;
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    height:300px;
+    text-align: center;
+    font-size: 18px;
+}
+.sectionImageFormCuenta p{
+    margin: 0;
+    padding: 0;
+}
+
+section form.formCuenta input:not(input[type=submit]){
+    width:100px;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    
+    border-radius: 3px;
+}
+
+
+section form.formCuenta input:not(input[type=submit]):focus{
+    background-color:#eee;
+}
+
+
+.formCuentaStn .btnCerrar{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top:0;
+    right: 0;
+    cursor:pointer;
+}
+section form.formCuenta#form input[type=text]:not(input[type=submit]){
+    border-bottom:1px solid #4caf50;
+}
+section form.formCuenta#form input[type=text]:not(input[type=submit]):focus{
+    /*border-bottom:1px solid #e91e63;
+    box-shadow: 0 1px 0 0 #e91e6293;*/
+
+    border-bottom:1px solid #4caf50;
+    box-shadow: 0 1px 0 0 #4caf50;
+
+}
+
+select.selectForms{
+    width: 140px;
+    display: block;
+}
+
+#form section label{
+    display: inline-block;
+    width: 50%;
+    font-size:16px;
+}
+
+#form section label select{
+    margin:auto;
+    border: #4caf50 1px solid;
+    border-radius:45px;
+    text-align:center;
+}
+
+#form section label select:focus{
+    box-shadow: 0 1px 0 0 #4caf50;
+    background-color:#eee;
+}
+
+#form section label:nth-child(2){
+   margin-left: -5px;
+}
+
+#form section label input{
+    width:150px;
+    margin-top:0; 
+}
+
+#form section {
+    margin-top:5px ;
+}
+
+#form section:nth-child(3) {
+    margin-top:10px ;
+    margin-left: 0;
+}
+
+
+/*formularios - radiobuttons*/
+#rCorriente,#rNoCorriente{
+    display: none;
+}
+
+#rCorriente + label.btnRadio{
+    width: 25px;
+    height:25px;
+    box-shadow:1px 1px 10px #ccc;
+    display: inline-block;
+    border-radius:50%;
+    border:1px solid #bbb;
+    padding: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#rCorriente:checked + label::before{
+    content:"";
+    background: #4caf50;
+    display:block;
+    margin: auto;
+    border-radius: 50%;
+    height:18px;
+    width:17px;
+}
+
+#rNoCorriente + label.btnRadio{
+    width: 25px;
+    height:25px;
+    box-shadow:1px 1px 10px #ccc;
+    display: inline-block;
+    border-radius:50%;
+    border:1px solid #bbb;
+    padding: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#rNoCorriente:checked + label::before{
+    content:"";
+    background: #4caf50;
+    display:block;
+    margin: auto;
+    border-radius: 50%;
+    height:18px;
+    width:17px;
+}
+
+.rubroSection{
+    display: inline-block;
+    vertical-align:top;
+    width: 50%;
+}
+
+.rubroSection:last-child{
+    margin-left: -5px;
+}
+
+.rubroSection label{
+    vertical-align:top;
+    color:black;
+}
+
+.tipoRubro{
+    font-size: 16px;
+    display: block;
+    margin-top: 10px; 
+}
+
+
+
+/*section resumen cuentas*/
+#sectionResumenCuenta{
+    width: 25%;
+    height: 500px;
+    text-align: center;
+
+}
+
+#sectionResumenCuenta span:nth-child(2n){
+    margin-bottom: 12px;
+}
+
+#sectionResumenCuenta > span.card-title{
+  background: #fba32f;
+  display: inline-block;
+  width: 100%;
+  border-radius: 3px;
+  color:white !important;
+  font-weight: bold;
+  margin-bottom:4px;
+}
+
+#sectionResumenCuenta .cantidadItems{
+    font-size:35px;
+}
+
+/*section listado de cuentas*/
+#sectionListCuentas{
+    width: 70%;
+    margin-left:-5px;
+    vertical-align: top;
+    height: 500px;
+    position: relative;
+}
+
+#sectionListCuentas span{
+   font-weight: bold;
+}
+
+
+#sectionListCuentas .btnSubmit{
+   top:0;
+   right:0;
+   height: 35px;
+   box-shadow: 0px 1px 1px 1px #0da2ec,
+     0px -1px 0px 0px #0da2ec;
+ }
+
+ #sectionListCuentas ul{
+    text-align:left;
+    overflow-y:scroll;
+    padding:30px;
+    height: 430px;
+  }
+
+  
+#sectionListCuentas ul table.tableCuentas tr{
+    border:none;
+}
+
+  #sectionListCuentas ul table.tableCuentas{
+    border: none;
+    border-collapse: initial;
+  }
+    
+  #sectionListCuentas ul table.tableCuentas tr td:first-child{
+    width: 90px;
+  }
+
+
+  #sectionListCuentas ul table.tableCuentas tr td{
+    padding: 5px;
+  }
+
+  #sectionListCuentas ul table.tableCuentas tr td i.delete{
+    cursor:pointer;
+    /*color:#ef5350;*/
+    color:#f43646;
+    margin-right: 5px;
+  }
+
+  /*descripcion de cuenta*/
+  #sectionListCuentas ul table.tableCuentas tr td .descripcionCuenta{
+    font-weight: normal;
+    background: rgb(245, 112, 89);
+    background: #ffb339;
+    padding:3px;
+    color:white;
+    border-radius: 3px;
+    font-size: 10px;
+    margin-right: 10px;
+    display:inline-block;
+    text-align: center;
+    width: 100%;
+  }
+
+  /*desactivar formulario*/
+
+  #sectionListCuentas ul table.tableCuentas tr td.descripcion{
+    float: right;
+    text-align: center;
+    display:block;
+  }
+
+
+  #sectionListCuentas ul table.tableCuentas tr td i.modify{
+    cursor:pointer;
+    color:#4caf50;;
+  }
+   
+  #sectionListCuentas ul table.tableCuentas tr.listaMayor{
+    /*background: rgb(231, 231, 231);*/
+    background:#ebe9e7;
+    cursor: pointer;
+    border-radius:3px;
+    margin-top:5px;
+    font-weight: bold;
+    box-shadow: 0px 1px 1px 1px #bbb,
+                0px -1px 0px 0px #bbb;
+    /*box-shadow: 1px 3px 0px 2px #bbb;*/
+    margin-bottom: 5px;
+    transition: all ease 0.6;
+}
+
+#sectionListCuentas ul table.tableCuentas tr{
+    display: inline-block;
+    width: 100%;
+}
+
+#sectionListCuentas ul table.tableCuentas tr td{
+    display: inline-block;
+}
+
+#sectionListCuentas ul table.tableCuentas  tr td.extends,#sectionListCuentas ul table.tableCuentas  tr td.extends-rubro{
+    float:right;
+}
+
+#sectionListCuentas ul table.tableCuentas  tr td.extends i{
+    background: #f43646;
+    border-radius: 50%;
+    padding:5px;
+    color:white;
+}
+
+#sectionListCuentas ul table.tableCuentas tr.listaMayor:hover{
+    /*background: rgb(231, 231, 231);*/
+    background:#ebe9e7;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px #bbb;
+    transition: all ease 0.6;
+}
+
+#sectionListCuentas ul table.tableCuentas  tr td.extends-rubro i{
+   color: #3bcc42;
+   /*background: #627efa;*/
+   cursor:pointer;
+    width:20px;
+    height:20px;
+}
+
+#sectionListCuentas ul table.tableCuentas  tr td.extends-delete i{
+    color: #982ffb;
+    
+ }
+ 
+ #sectionListCuentas ul table.tableCuentas  tr.rubrosCuenta{
+    font-weight: bold;
+    
+ }
+ 
+ #sectionListCuentas ul table.tableCuentas .subnivelRubro{
+    background-color:red;
+ }
+ 
+ /*PANEL DE HERRAMIENTAS EN CATALOGO DE CUENTAS*/
+
+ .panelCuentas{
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 7px;
+    background: rgb(228, 227, 227);
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 1px 1px 1px #bbb,
+     0px -1px 0px 0px #bbb;
+}
+
+ .panelCuentas .ajuste{
+     width: 25px;
+     height: 25px;
+     cursor:pointer;
+     margin: 0 3px;
+ }
+
+.disabled{
+    
+    filter: opacity(10%);
+    pointer-events: none;
+}
+
+ #sectionListCuentas .panelDetalleCuentas{
+     text-align: left;
+     box-shadow: 0px -1px 0px 0px black;
+     background: #8381f8;
+     background: #f43646;
+     position: absolute;
+     left: 0;
+     color:white;
+     bottom: 0;
+     width: 100%;
+    
+ }
+
+ .panelDetalleCuentas p{
+     display: inline-block;
+     vertical-align: top;
+     text-align: center;
+     border:0;
+     border-right: 1px white solid;
+     height: 30px;
+     pointer-events: none;
+     font-weight: bold;
+ }
+
+ .panelDetalleCuentas p.edit{
+  cursor: pointer;
+  margin-left: 0;
+}
+
+
+  
+.panelDetalleCuentas p span{
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .panelDetalleCuentas p.op{
+    font-weight: normal
+  }
+
+  #sectionListCuentas ul table.tableCuentas  tr:not(.listaMayor,.rubrosCuenta){
+   cursor:pointer;
+ }
+ 
+
+
+ /*seccion de detalle de cuentas*/
+ #seccionFormCuenta.detalleCuenta .formCuentaStn{
+     box-shadow: 0px 0px 0px 0px #ddd;
+     padding-bottom: 20px;
+ 
+ }
+
+ #seccionFormCuenta.detalleCuenta .formCuentaStn .titulo{
+   font-weight: bold;
+   display: inline-block;
+   font-size: 24px;
+   text-shadow: 1px 1px 1px #454546;
+   margin-top:0;
+}
+
+#seccionFormCuenta.detalleCuenta .formCuentaStn .itemDetalle{
+    width:300px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 2px;
+    text-align: left;
+    padding: 5px;
+    padding-left: 15px;
+    background: #f1f7f2;
+ }
+
+ #seccionFormCuenta.detalleCuenta .formCuentaStn .itemDetalle img{
+    width:50px;
+    display: inline-block;
+ }
+
+ #seccionFormCuenta.detalleCuenta .formCuentaStn .itemDetalle p{
+    display: inline-block;
+    vertical-align: top;
+ }
+
+
+ #seccionFormCuenta.detalleCuenta .formCuentaStn .itemDetalle.nombreCuenta{
+    width:67%;
+ }
+ #seccionFormCuenta.detalleCuenta .formCuentaStn .itemDetalle.codigoCuenta{
+    width:25%;
+ }
+
+ #seccionFormCuenta.detalleCuenta .formCuentaStn .filaDetalle:nth-child(1){
+    overflow: scroll-x;
+ }
+
+
+ #seccionResumenCuentas{
+     overflow-y: scroll;
+     width: 100%;
+     height: 450px;
+ }
+
+ /*descripcion de estado de elemento tabla de cuentas (elemento seleccionado)*/
+ #sectionListCuentas ul table.tableCuentas  tr .descripcion .estado{
+     background: #982ffb;
+ }
+
+
+ /*LIBRO DIARIO*/
+ ul.bloqueLbDiario#bloqueLbDiario {
+   /* overflow: hidden;*/
+  }
+
+  ul.bloqueLbDiario#bloqueLbDiario .sectionLbDiario{
+   display:inline-block;
+   margin-left:-3px;
+   border-left:1px #ccc solid;
+   border-collapse: collapse;
+ }
+
+ ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM td{
+    border:1px #ccc solid;
+ }
+ ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM th{
+    border:1px #ccc solid;
+ }
+
+.libroDiario#sectionListCuentas{
+    width: 95%;
+}
+
+
+
+#sectionListCuentas ul.bloqueLbDiario{
+    height: 260px;
+    padding-top:0px;
+    padding-bottom:0px;
+    
+}
+
+#elementosTransacion select{
+    width: 150px;
+    height: 40px;
+}
+
+#elementosTransacion input{
+    width: 80px;
+    border: none;
+    height: 30px;
+}
+
+#elementosTransacion .lblCuentasListado{
+    font-size:16px;
+    font-weight: bold;
+    display: inline-block;
+    width: 47%;
+}
+
+#elementosTransacion section:nth-child(2){
+    text-align: center;
+}
+
+#elementosTransacion .entradaCuentas{
+    display: inline-block;
+    width: 47%;
+    margin-bottom: 6px;
+}
+
+#elementosTransacion #cuentasListado{
+    font-size:16px;
+    width: 200px;
+}
+
+#elementosTransacion p{
+    border: none;
+    display: inline-block;
+}
+
+
+#elementosTransacion section .entradaCuentas #cuentasListado{
+    width: 400px;
+}
+
+#elementosTransacion section .entradaCuentas #montoOperar{
+    width: 200px;
+    border-bottom: #ccc solid 1px;
+}
+
+#elementosTransacion section .entradaCuentas #montoOperar:focus{
+    border-bottom: rgb(97, 97, 97) solid 1px;
+}
+
+#elementosTransacion section .entradaCuentas label{
+    font-size: 15px;
+}
+
+.libroDiario#sectionListCuentas{
+    /*overflow-y:scroll;*/ 
+}
+
+#elementosTransacion .entradaCuentas #asentar{
+    background: #3bcc42;
+    color:white;
+    border-radius:3px;
+    cursor: pointer;
+    box-shadow: 0px 0.5px 0.5px 0.5px #c5bdbd,
+                0px -0.5px 0px 0px #c5bdbd,
+                0px 0px 4px 1px #c5bdbd;
+}
+
+
+#sectionListCuentas .btnTransaccion#addCuenta[name=enviar]{
+    height: 35px;
+    box-shadow: 0px 1px 1px 1px #0da2ec, 0px -1px 0px 0px #0da2ec;
+    background: #0da2ec;
+    color: white;
+    font-weight: bold;
+    appearance: none;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #0da2ec;
+    cursor: pointer;
+    margin: 0 10px;
+    
+
+    float: right;
+}
+
+
+#tableCuentasLBM{
+    overflow: scroll;
+}
+
+#fechaTransaccion.fechaTransaccion{
+    width:300px;
+    border:1px solid #ccc;
+    border-radius:3px;
+}
+
+#sectionListCuentas.libroDiario{
+    height:590px;
+}
+
+#tableCuentasLBM th,#tableCuentasLBM td{
+    padding:5px;
+}
+
+#bloqueLbDiario.bloqueLbDiario span{
+    font-weight: normal;
+}
+
+ #bloqueLbDiario.bloqueLbDiario span.advertenciaTransacción{
+    display: inline-block;
+    padding:5px;
+    color:white;
+    border-radius:3px;
+    box-shadow: 0px 0.5px 0.5px 0.5px #c5bdbd,
+                0px -0.5px 0px 0px #c5bdbd,
+                0px 0px 4px 1px #c5bdbd;
+
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.bloqueLbDiario .advertenciaTransacción > span{
+   display: inline-block;
+   vertical-align: top;
+}
+
+#bloqueLbDiario.bloqueLbDiario span.advertenciaTransacción.partida{
+  float:right;
+  background: #982ffb;
+}
+
+#bloqueLbDiario.bloqueLbDiario span.advertenciaTransacción.partida .titulo{
+    font-weight: bold;
+  }
+
+  #bloqueLbDiario.bloqueLbDiario span.advertenciaTransacción.partida.fecha{
+    float:left;
+    background: #ffb339;
+    min-width: 220px;
+  }
+
+.bgAdvertenciaError{
+    background: #e04d4d;
+    width: 220px;
+}
+.bgAdvertenciaCheck{
+    /*background: #8cc28c;*/
+    background: #457fc2;
+    width: 220px;
+}
+
+.btnOperaciones{
+    width:30px;
+    height:30px;
+    margin: 0 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr td:last-child{
+    text-align: center;
+ }
+
+#conceptoTransaccion.conceptoTransaccion{
+     border:1px solid #ccc;
+     border-radius:3px;
+     width:70%;
+     padding: 0;
+     height: 30px;
+     margin: 0;
+ }
+
+ .entradaCuentas .lblConcetoTransaccion{
+    font-size: 16px;
+    font-weight: bold;
+ }
+
+ .concepto{
+    width: 100%;
+    text-align: left;
+    padding-left: 30px;
+ } 
+
+
+ /*card de operaciones */
+ #movimientos.tarjeta span.advertenciaTransacción{
+    display: inline-block;
+    color:white;
+    border-radius:3px;
+    box-shadow: 0px 0.5px 0.5px 0.5px #c5bdbd,
+                0px -0.5px 0px 0px #c5bdbd,
+                0px 0px 4px 1px #c5bdbd;
+    margin: 10px 0;
+    font-weight: normal;
+    padding: 5px;
+    text-align: center;
+   
+}
+
+#movimientos.tarjeta span.advertenciaTransacción.operacion.fecha{
+    float:left;
+    background: #0bc084;
+    font-weight: none;
+    width: 240px;
+    vertical-align: top;
+    /*background: #0bc050;*/
+  }
+
+  #movimientos.tarjeta span.advertenciaTransacción.operacion .material-icons{
+    font-weight: normal;
+  }
+
+  #movimientos.tarjeta span.advertenciaTransacción.operacion.descripcion{
+    background: none;
+    width: 240px;
+    vertical-align: top;
+    box-shadow: none;
+    color:black;
+    text-align: left;
+    cursor:none;
+  }
+  #movimientos.tarjeta span.advertenciaTransacción .titulo{
+   font-weight: normal;
+  }
+
+  #movimientos.tarjeta span.advertenciaTransacción.operacion span{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+  }
+
+  #movimientos.tarjeta span.advertenciaTransacción.operacion span:last-child{
+    /*border-bottom: #0da2ec 3px solid;*/
+  }
+
+
+  .tarjeta-horizontal.resumenCuentas{
+      height: 336px;
+  }
+
+  
+  .tarjeta-horizontal.resumenCuentas span{
+   display: inline-block;
+   border-bottom:1px solid #ccc;
+   width: 100%;
+   font-weight: bolder;
+   background: #0da2ec;
+   color: white;
+
+}
+
+.desabilitado{
+    background: #454546 !important;
+  
+}
+
+.tipoElemento{
+    width: 30%;
+   
+    margin:5px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 3px;
+    border:1px solid #ccc;
+   
+}
+
+.tipoElemento img{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+.resumenCuentas .seccionContent .tipoElemento section span{
+    background: none;
+    color:black;
+    border:none;
+    font-weight: normal;
+}
+
+.resumenCuentas .tipoElemento section:first-child span{
+    border-bottom:1px solid #ddd;
+}
+
+.resumenCuentas .tipoElemento section:last-child span:last-child{
+  
+    border-top:1px solid #ddd;
+}
+
+.resumenCuentas .seccionContent{
+ overflow-y:scroll;
+}
+
+.seccionContent{
+    height: 300px;
+}
+
+.sectionPartida{
+    padding:20px; 
+    border-radius: 5px;
+    border:1px solid #039ae594;
+    border:1px solid #ccc;
+    margin: 10px 0;
+}
+
+#sectionListCuentas.listadoLibroDiario ul.bloqueLbDiario{
+    height: 480px;
+}
+
+#bloqueLbDiario.bloqueLbDiario span.advertenciaTransacción.partida.eliminarPartida{
+    background: #f43646;
+    margin: 0 5px;
+    cursor:pointer;
+    border-radius: 50%;
+}
+
+
+#bloqueLbDiario.bloqueLbDiario span.advertenciaTransacción.partida.editarPartida{
+    background: #64b5f6;
+    margin-left: 10px;
+    margin-right: 5px;
+    cursor:pointer;
+    border-radius: 50%;
+}
+
+.entradaCuentas .btnFecha{
+    display: inline-block;
+    vertical-align: top;
+    background: #f43646;
+    color:white;
+    padding: 3px;
+    cursor:pointer;
+    border-radius: 50%;
+    border-top-left-radius: 100px; 
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0px 0.5px 0.5px 0.5px #c5bdbd, 0px -0.5px 0px 0px #c5bdbd, 0px 0px 4px 1px #c5bdbd;
+}
+
+.tablaTotalesPartidas{
+    width: 90%;
+    margin: auto;
+   
+}
+
+.tarjeta .tablaTotalesPartidas thead tr th:first-child{
+    width: 60%;
+
+}
+
+.tarjeta .tablaTotalesPartidas thead tr th, .tarjeta .tablaTotalesPartidas thead tr{
+    padding: 0;
+    border:none;
+}
+
+.tarjeta .tablaTotalesPartidas thead tr th, .tarjeta .tablaTotalesPartidas thead tr{
+    padding: 0;
+    border:none;
+}
+
+.tarjeta .tablaTotalesPartidas thead tr th span{
+    background:#3bcc42;
+    padding: 5px;
+    width: 90%;
+    display: inline-block;
+    color:white;
+    border-radius: 3px;
+    box-shadow: 0px 0.5px 0.5px 0.5px #c5bdbd, 0px -0.5px 0px 0px #c5bdbd, 0px 0px 4px 1px #c5bdbd;
+
+}
+
+
+
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM.tablaPartidas tr td:first-child{
+    width: 60%;
+}
+
+
+.tablaUltimasTransacciones .advertenciaTransacción{
+    display: inline-block;
+    
+    color: white;
+    border-radius: 3px;
+    box-shadow: 0px 0.5px 0.5px 0.5px #c5bdbd, 0px -0.5px 0px 0px #c5bdbd, 0px 0px 4px 1px #c5bdbd;
+    font-weight: normal;
+    background: #e40e4e;
+   
+}
+
+#ultimasTransacciones.lastestTrasactions .tablaUltimasTransacciones .advertenciaTransacción span{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+}
+
+#ultimasTransacciones.lastestTrasactions .tablaUltimasTransacciones td{
+    margin: 0;
+    padding: 0;
+}
+
+#ultimasTransacciones.lastestTrasactions .tablaUltimasTransacciones tr td:first-child{
+    padding-left: 20px;
+}
+
+#bloqueLbDiario.bloqueLbDiario span.advertenciaTransacción#codigoCuentaLBM{
+    float: left;
+    margin-right:5px; 
+}
+
+#bloqueLbDiario.bloqueLbDiario span.advertenciaTransacción#numeroCuentaLBM{
+    float: right;
+    margin-right:5px; 
+}
+
+
+
+#bloqueLbDiario.bloqueLbDiario span.advertenciaTransacción.partida.fecha.cuentaLBM{
+    width: auto;
+    margin-right: 5px;
+    min-width: auto;
+}
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr.totalesLBM td{
+    font-weight: bold;
+}
+
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr th:first-child{
+    text-align: center;
+    border-radius:5px;
+}
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr th span.ref{
+    display:block;
+    background: #3bcc42;
+    margin-left: 7px;
+}
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr th{
+    text-align: center
+}
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr td{
+    font-size: 12px;
+}
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr td:nth-child(2){
+    width:21%;
+}
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr td:nth-child(3){
+  width: 70%;
+}
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr td.saldos{
+    width:10%;
+}
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr td:first-child{
+    width:1%;
+}
+
+
+/*tablas del libro diario*/
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM.listadoDeAsientos tr td{
+    font-size: 16px;
+}
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM.listadoDeAsientos tr td:nth-child(2){
+    width: 40%;
+}
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM.listadoDeAsientos tr td:nth-child(3){
+    width: 10%;
+}
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM.listadoDeAsientos tr td:nth-child(4){
+    width: 10%;
+}
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM.listadoDeAsientos tr td:last-child{
+    width: 20%;
+}
+
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM.tablaPartidas.listadoAsientos tr td{
+    font-size: 14px;
+}
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM.tablaPartidas.listadoAsientos tr td:nth-child(2){
+   width: 40%;
+}
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM.tablaPartidas.listadoAsientos tr td:nth-child(3){
+    width: 5%;
+ }
+
+ ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM.tablaPartidas.listadoAsientos tr td:nth-child(4){
+    width: 15%;
+ }
+
+ ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM.tablaPartidas.listadoAsientos tr td:nth-child(1){
+    width: 10%;
+ }
+
+
+ ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM.tablaPartidas.listadoAsientos tr td:nth-child(5){
+    width: 15%;
+ }
+
+ ul.bloqueLbDiario#bloqueLbDiario  #tableCuentasLBM #conceptoPartida{
+     background: #df15737c;
+     background: #1d1c1c7c;
+     color:white;
+ }
+
+ ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr:first-child td{
+     border-radius: 5px;
+ }
+
+
+ #sectionListCuentas.tarjeta.tarjeta-horizontal section.entradaCuentas.totalesPartida{
+     width: 94%;
+     margin-left: 30px;
+ }
+
+ #sectionListCuentas.tarjeta.tarjeta-horizontal section.entradaCuentas.totalesPartida table td{
+    border:1px solid #bbb;
+}
+
+#sectionListCuentas.tarjeta.tarjeta-horizontal section.entradaCuentas.totalesPartida table td:nth-child(3){
+   width: 15%;
+}
+
+
+#sectionListCuentas.tarjeta.tarjeta-horizontal section.entradaCuentas.totalesPartida table td:nth-child(4){
+    width: 15%;
+ }
+
+ #sectionListCuentas.tarjeta.tarjeta-horizontal section.entradaCuentas.totalesPartida table td:nth-child(2){
+    width: 40%;
+ }
+
+ .seccionSaldos{
+     width: 72%;
+     display: inline-block;
+     text-align:left;
+     
+ }
+
+ .seccionSaldos article{
+    display: inline-block;
+    vertical-align: top;
+    padding:5px;
+    border-top-right-radius:50%;
+    border-top-left-radius:50%;
+    border-bottom-left-radius:3px;
+    border-bottom-right-radius:3px;
+    margin-top:10px;
+    border-radius: 2px 2px 10px 10px;
+    font-weight:bold;
+}
+
+.seccionSaldos .saldo{
+    font-weight:bold;
+    color:#9e9e9e;
+}
+
+.seccionSaldos .debe{
+   background: #99f881;
+   background: #81aff8;
+   box-shadow: 0px 0.5px 0.5px 0.5px #8f8f8f, 0px -0.5px 0px 0px #6d6a6a, 0px 0px 4px 1px #c5bdbd;
+
+}
+
+.seccionSaldos .haber{
+    background: #f8d881;
+    background: #f881b9;
+    box-shadow: 0px 0.5px 0.5px 0.5px #8f8f8f, 0px -0.5px 0px 0px #6d6a6a, 0px 0px 4px 1px #c5bdbd;
+    
+ }
+
+ ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr th.columnaDebe{
+    background: #81aff8;
+ }
+
+ ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr th.columnaHaber{
+    background: #f881b9;
+ }
+
+ ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr.encabezadoLibroDiario{
+    background: #81aff8;
+    color:white;
+ }
+
+ ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr.encabezadoLibroDiario th{
+   border-radius: 0;
+ }
+
+ ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr.encabezadoLibroDiario th:nth-child(1){
+   border-top-left-radius:5px;
+   border:none;
+ }
+
+ ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr.encabezadoLibroDiario th{
+    border:none;
+  }
+
+ ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr.encabezadoLibroDiario th:nth-child(5){
+    border-top-right-radius:5px;
+    border:none;
+  }
+
+  ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr#conceptoPartida td:nth-child(1){
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    border-top-left-radius:0;
+    border-top-right-radius:0;
+    border:none;
+  }
+
+  ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr#conceptoPartida td{
+    border:none;
+  }
+
+  ul.bloqueLbDiario#bloqueLbDiario .tablaPartidas{
+    box-shadow: 1px 2px 40px 2px #ccc;
+  }
+
+  ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM.cuentas tr th{
+    background: #81aff8;
+    color:white;
+  }
+
+  ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM.cuentas .partida{
+    background:#000000;
+    color:white;
+  }
+
+  ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM.cuentas tr:last-child{
+    background:#1d1c1c7c;
+    color:white;
+  }
+
+
+#sectionListCuentas ul.bloqueLbDiario .peridoLbD{
+    font-weight: bold;
+    font-size: 20px;
+    text-align:center;
+    display: inline-block;
+    width: 100%;
+}
+
+.seccionRegPartida{
+    width: 100%;
+    z-index:10000;
+    height:100vh;
+    background:rgba(255, 255, 255, 0.7);
+    position:absolute;
+    top:0;
+    left:0;
+    text-align: center;
+}
+
+article.seccionRegPartida .formularioPartida{
+    display: inline-block;
+}
+
+article#btnCerrarFormPartida{
+    position: absolute;
+    top:0;
+    right:0;
+    
+}
+
+article#btnCerrarFormPartida img{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.cuentasBalanza{
+    width: 45%;
+    border-top-left-radius: 5px;
+}
+
+.encabezadoSaldo{
+    width:15% ;
+}
+
+.sectionPartida table#tableCuentasLBM.tablaPartidas.listadoAsientos{
+    table-layout: auto;
+    background: none;
+    border: none;
+}
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr.encabezadoLibroDiario td#cuentaConceptoL.cuentasBalanza{
+    border-top-left-radius: 5px;
+}
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr.encabezadoLibroDiario .ultimo{
+    border-top-right-radius: 5px;
+}
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr#conceptoPartida.pieBalanza td{
+    border-radius: 0;
+}
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr#conceptoPartida.pieBalanza td:first-child{
+    border-bottom-left-radius: 5px;
+}
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr#conceptoPartida.pieBalanza td:last-child{
+    border-bottom-right-radius: 5px;
+}
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM  #cuentaConceptoL{
+
+   border-top-left-radius:5px; 
+}
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr.encabezadoLibroDiario .encabezadoSaldo.deudorPrimero{
+    border-radius: 0;
+}
+
+
+
+.sectionPartida table#tableCuentasLBM.tablaPartidas.listadoAsientos.balanza{
+    table-layout:fixed;
+}
+
+#bloqueLbDiario.bloqueLbDiario span.advertenciaTransacción.partida.fecha.partidaEliminada{
+    background: #f43646;
+}
+
+#bloqueLbDiario.bloqueLbDiario #partidaEliminada{
+    text-align: center;
+    position:relative;
+    height: 100px;
+    border:1px solid #bd2a3691;
+    border:1px solid #ccc;
+}
+
+.imgPartidaBorrada{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    margin:10px;
+
+}
+#bloqueLbDiario.bloqueLbDiario #partidaEliminada article{
+   position: absolute;
+   top:0;
+   left:0;
+   text-align: center;
+   width:100%;
+}
+#bloqueLbDiario.bloqueLbDiario #partidaEliminada .inabilitado{
+    filter: brightness(60%);
+ }
+ 
+
+/*estilo de scroll bars*/
+*::-webkit-scrollbar{
+    width: 6px;
+}
+*::-webkit-scrollbar-track{
+    background: #858484;
+}
+*::-webkit-scrollbar-thumb{
+    background:  #afafaf;
+    border-radius: 20px;
+    border:3px solid  #afafaf;
+}
+
+#bloqueLbDiario.bloqueLbDiario span.advertenciaTransacción.editarPartida.partida.restaurarPartida {
+    background:#3bcc42;
+    cursor:pointer;
+    margin-right: 0;
+    border-radius: 50%;
+    pointer-events: all;
+}
+
+
+#bloqueLbDiario.bloqueLbDiario .sectionPartida .inabilitado{
+    filter: brightness(60%);
+ }
+ 
+
+ /*estado de resultados*/
+
+ #sectionListCuentas.estadoResultado .bloqueLbDiario#bloqueLbDiario table#listadoCuentasER{
+
+ }
+
+ #sectionListCuentas.estadoResultado .bloqueLbDiario#bloqueLbDiario table#listadoCuentasER .total{
+     font-weight: bold;
+}
+
+#sectionListCuentas.listadoLibroDiario ul.bloqueLbDiario.cuentasER{
+    height: 530px;
+}
+
+#sectionListCuentas.estadoResultado .bloqueLbDiario#bloqueLbDiario table#listadoCuentasER td{
+    padding:5px;
+    border:none;
+}
+
+#sectionListCuentas.estadoResultado .bloqueLbDiario#bloqueLbDiario table#listadoCuentasER tr{
+    border:none;
+}
+
+#sectionListCuentas.estadoResultado .bloqueLbDiario#bloqueLbDiario table#listadoCuentasER td:nth-child(5){
+    padding: 0 10px;
+}
+
+#sectionListCuentas.estadoResultado .bloqueLbDiario#bloqueLbDiario table#listadoCuentasER tr.filaVacia td{
+    padding: 10px 0;
+}
+
+#sectionListCuentas.estadoResultado .bloqueLbDiario#bloqueLbDiario table#listadoCuentasER td.barraHorizontal{
+    border-bottom:1px solid black;
+}
+
+#sectionListCuentas.estadoResultado .bloqueLbDiario#bloqueLbDiario table#listadoCuentasER td.pintar{
+    background: #039be5;
+    color:white;
+}
+
+#sectionListCuentas.estadoResultado .bloqueLbDiario#bloqueLbDiario table#listadoCuentasER td.pintar2{
+    background:#ffb339;
+    color:white;
+}
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr th{
+    background: #81aff8;
+    color:white;
+}
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr.totalesLBM td{
+    background: #1d1c1c7c;
+    color:white;
+}
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM{
+    box-shadow: 1px 2px 40px 2px #ccc;
+    background: none;
+}
+
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr.encabezado th.esquinaLT{
+    border:none;
+    border-radius: 0;
+    border-top-left-radius: 5px;
+}
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM .totalesLBM .esquinaBL{
+    border:none;
+    border-radius: 0;
+    border-bottom-left-radius: 5px;
+}
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM .totalesLBM .esquinaBR{
+    border:none;
+    border-radius: 0;
+    border-bottom-right-radius: 5px;
+}
+
+ul.bloqueLbDiario#bloqueLbDiario #tableCuentasLBM tr .esquinaTR{
+    border:none;
+    border-radius: 0;
+    border-top-right-radius: 5px;
+}
+
