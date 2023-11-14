@@ -154,11 +154,11 @@
                                 $saldoDebe = $listadoPartidas[$i]["saldoDebe"];
                                 if ($saldoDebe == "0.00") { ?>
                                     <td></td>
-                                      <td><?php echo "$" . $listadoPartidas[$i]["saldoHaber"]; ?></td>
+                                      <td><?php echo "$" .number_format($listadoPartidas[$i]["saldoHaber"],2,".",","); ?></td>
                                     </tr>
                                 <?php 
                             } else { ?>
-                                        <td>$<?php echo $saldoDebe; ?></td>
+                                        <td>$<?php echo number_format($saldoDebe,2,".",","); ?></td>
                                             <td></td>
                                         </tr>
                                 <?php 
@@ -352,8 +352,8 @@
                <thead> 
                     <tr>
                         <th>TOTALES</th>
-                        <th><span id="saldoDebeLbDiario">$<?php echo $sumaSaldos["saldoDebe"]; ?></span></th>
-                        <th><span>$<?php echo $sumaSaldos["saldoHaber"]; ?></th>
+                        <th><span id="saldoDebeLbDiario">$<?php echo number_format($sumaSaldos["saldoDebe"],2,".",","); ?></span></th>
+                        <th><span>$<?php echo number_format($sumaSaldos["saldoHaber"],2,".",","); ?></th>
                     </tr>
                 <thead>
             </table>

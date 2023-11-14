@@ -152,6 +152,80 @@ class DaoPartida
         try{
              $stm = $this->conexion->query(BALANZA_COMPROBACION);
              $stm->execute();
+            
+             return $stm->fetchAll();
+
+        }catch(PDOException $e){
+            $e->getMessage();
+        }
+    }
+
+
+    public function totalesRubroActivo(){
+        try{
+             $stm = $this->conexion->query(TOTALES_RUBRO_ACTIVO);
+             $stm->execute();
+            
+             return $stm->fetchAll();
+
+        }catch(PDOException $e){
+            $e->getMessage();
+        }
+    }
+
+    public function totalesActivosPorRubro(){
+        try{
+             $stm = $this->conexion->query(SELECCIONAR_TOTAL_ACTIVO_RUBRO);
+             $stm->execute();
+            
+             return $stm->fetchAll();
+
+        }catch(PDOException $e){
+            $e->getMessage();
+        }
+    }
+
+    public function totalesPasivosPorRubro(){
+        try{
+             $stm = $this->conexion->query(SELECCIONAR_TOTAL_PASIVO_RUBRO);
+             $stm->execute();
+            
+             return $stm->fetchAll();
+
+        }catch(PDOException $e){
+            $e->getMessage();
+        }
+    }
+
+    public function totalesRubroPasivo(){
+        try{
+             $stm = $this->conexion->query(TOTALES_RUBRO_PASIVO);
+             $stm->execute();
+            
+             return $stm->fetchAll();
+
+        }catch(PDOException $e){
+            $e->getMessage();
+        }
+    }
+
+    public function activosFinales(){
+        try{
+             $stm = $this->conexion->query(OBTENER_ACTIVOS_FINALES);
+             $stm->execute();
+            
+             return $stm->fetchAll();
+
+        }catch(PDOException $e){
+            $e->getMessage();
+        }
+    }
+
+    public function pasivosCapitalFinales(){
+        try{
+             $stm = $this->conexion->query(OBTENER_PASIVOS_CAPITAL_FINALES);
+             $stm->execute();
+            
              return $stm->fetchAll();
 
         }catch(PDOException $e){

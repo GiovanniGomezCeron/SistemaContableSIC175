@@ -90,7 +90,7 @@
         <!-- Item Balance General-->
         <li class="animate__bounceIn">
             <img src="img/hoja-de-balance.png">
-            <a href="">Balance General</a>
+            <a href="?o=<?php echo base64_encode("balanceGeneral");?>">Balance General</a>
         </li>
 
 

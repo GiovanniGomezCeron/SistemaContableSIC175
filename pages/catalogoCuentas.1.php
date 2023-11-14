@@ -110,18 +110,20 @@
                 <!--TABLA CON LISTA DE CUENTAS-->
                 <table class="tableCuentas">
 
-                <?php
+                <?php 
                 $contador = 0;          //cuenta la cantidad de cuentas por iteración
                 $contadorRubro = 1;    //cuenta la cantidad de rubros
                 $len = count($cuentas);//cantidad de cuentas
-                $codigoAnterior = 10;  //guarda longitud de codigo de cuenta anterior
+                $codigoAnterior = 0;  //guarda longitud de codigo de cuenta anterior
+                $limite = false;
 
                 //recorriendo todos los elementos contables
                 for ($i = 0; $i < count($elemsContables); $i++) {
-                    $elementoContableActual = $elemsContables[$i]["clasificacion"];?>
+
+                    $elementoContableActual = $elemsContables[$i]["clasificacion"]; ?>
 
                          <tr class='listaMayor'>
-                                <td><?php echo $elemsContables[$i]["id"]; ?></td>
+                                <td><?php echo $elemsContables[$i]["codigo"]; ?></td>
                                 <td><?php echo $elemsContables[$i]["clasificacion"]; ?></td>
                                 <td class="extends">
                                     <i class="material-icons btnMostrarCuenta">expand_less</i>
@@ -129,12 +131,17 @@
                           </tr>
 
                     <?php 
-                    $rubroActual = $cuentas[$contador]["subtipo"];
-                    $codigoRubroActual = $elemsContables[$i]["id"].$contadorRubro;
+                        
+                    //$rubroActual = $cuentas[$contador]["subtipo"];
+                    $codigoRubroActual = $elemsContables[$i]["codigo"] . $contadorRubro;
 
+                   
+                    //if (!$limite) {
                     //recorriendo todos los rubros siempre y cuando sean el mismo elem contable 
-                    while ($elementoContableActual == $cuentas[$contador]["clasificacion"]) { ?>
-
+                        while ($elementoContableActual == $cuentas[$contador]["clasificacion"]) {
+                            $rubroActual = $cuentas[$contador]["subtipo"]; 
+                            ?>
+                            
                             <tr class="rubrosCuenta hide-element">
                                 <td><?php echo $codigoRubroActual; ?></td>
                                 <td><?php echo $rubroActual; ?></td>
@@ -147,20 +154,20 @@
                         <?php 
                         $imagen = "";
                         while ($rubroActual == $cuentas[$contador]["subtipo"]) {
-                                $codigoCuenta = $cuentas[$contador]["codigo"];
-                                $bold = strlen($codigoCuenta) == 4 ? "rubrosCuenta" : "";
-                                
-                                if($codigoAnterior < strlen($cuentas[$contador]["codigo"])){
-                                    $imagen = "visibility_off";
-                                    $codigoAnterior = $cuentas[$contador]["codigo"];
-                                }
-                            ?>
+                            $codigoCuenta = $cuentas[$contador]["codigo"];
+                            $bold = strlen($codigoCuenta) == 4 ? "rubrosCuenta" : "";
 
-                            <tr class="magictime vanishIn <?php echo $bold;?>">
-                                <td><?php echo  $codigoCuenta;?></td>
-                                <td><?php echo $cuentas[$contador]["nombre"];?></td>
+                            if (strlen($cuentas[$contador]["codigo"]) < strlen($cuentas[$contador + 1]["codigo"])) {
+                                $imagen = "visibility_off";
+                            }
+
+                            ?> 
+
+                            <tr class="magictime vanishIn <?php echo $bold; ?>">
+                                <td><?php echo $codigoCuenta; ?></td>
+                                <td><?php echo $cuentas[$contador]["nombre"]; ?></td>
                                 <td class='extends-rubro'>
-                                    <i class='material-icons btnMostrarCuenta'><?php echo $imagen;?></i>
+                                    <i class='material-icons btnMostrarCuenta'><?php echo $imagen; ?></i>
                                 </td>
                                 <td class='descripcion'><span class='descripcionCuenta'>Cuenta</span></td> 
                                
@@ -168,21 +175,36 @@
                                 
                             </tr>
                         <?php 
-                            
-                            $contador++; 
-                            if($contador==$len){
-                                goto end;
-                            }
+                        $contador++;
+                        if ($contador + 1 == $len) {
+                            goto end;
+
                         }
-                        $rubroActual = $cuentas[$contador]["subtipo"];
-                        $contadorRubro++;
-                        $codigoRubroActual = $elemsContables[$i]["id"].($contadorRubro);
+                        $imagen = "";
+
                     }
-                    $contadorRubro=1;
+                   // if (!$limite) {
+
+                        $rubroActual = $cuentas[$contador]["subtipo"];
+                    //}
+                    $contadorRubro++;
+                    $codigoRubroActual = $elemsContables[$i]["id"] . ($contadorRubro);
                 }
-                end:?>    
-    
-                </table>
+                $contadorRubro = 1;
+            }
+        
+        end :?>  
+            <!--<tr class="magictime vanishIn">
+                <td><?php //echo $cuentas[$len-1]["codigo"]; ?></td>
+                <td><?php //echo $cuentas[$len-1]["nombre"]; ?></td>
+                <td class='extends-rubro'>
+                    <i class='material-icons btnMostrarCuenta'><?php //echo $imagen; ?></i>
+                </td>
+                <td class='descripcion'><span class='descripcionCuenta'>Cuenta</span></td> 
+                <td class='descripcion'><span class='descripcionCuenta estado hide'>Seleccionado</span></td>
+            </tr>-->
+          
+            </table>
             </ul>
             <!--<section class="panelDetalleCuentas">
                <p>

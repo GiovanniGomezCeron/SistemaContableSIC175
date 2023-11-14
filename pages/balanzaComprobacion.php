@@ -104,19 +104,19 @@
                                         <?php  $movimientoDebe  = $listadoCuentas[$i]["movimientoDebe"];
                                                $movimientoHaber = $listadoCuentas[$i]["movimientoHaber"];
                                         ?>
-                                        <td><?php echo "$".$movimientoDebe;?></td>
-                                        <td><?php echo "$".$movimientoHaber;?></td>
+                                        <td><?php echo "$".number_format($movimientoDebe,2,".",",");?></td>
+                                        <td><?php echo "$".number_format($movimientoHaber,2,".",",");?></td>
                                         <?php 
                                                 if($movimientoDebe > $movimientoHaber){
                                                     $saldo = $movimientoDebe - $movimientoHaber;
-                                                        echo "<td>$$saldo</td>
+                                                        echo "<td>$".number_format($saldo,2,".",",")."</td>
                                                               <td>$0.00</td>";
                                                               $salDebe += $saldo;
 
                                                 }else if($movimientoHaber > $movimientoDebe){
                                                     $saldo = $movimientoHaber - $movimientoDebe;
                                                         echo "<td>$0.00</td>
-                                                              <td>$$saldo</td>";
+                                                              <td>$".number_format($saldo,2,".",",")."</td>";
                                                               $salHaber += $saldo; 
                                                 }else{
                                                         echo "<td>$0.00</td>
@@ -130,10 +130,10 @@
 
                     <tr id="conceptoPartida" class="pieBalanza">
                         <td><b>TOTALES</b></td>
-                        <td><?php echo  "$".$movDebe;?></td>
-                        <td><?php echo  "$".$movHaber;?></td>
-                        <td><?php echo  "$".$salDebe;?></td>
-                        <td ><?php echo "$".$salHaber;?></td>
+                        <td><?php echo  "$".number_format($movDebe,2,".",",");?></td>
+                        <td><?php echo  "$".number_format($movHaber,2,".",",");?></td>
+                        <td><?php echo  "$".number_format($salDebe,2,".",",");?></td>
+                        <td ><?php echo "$".number_format($salHaber,2,".",",");?></td>
                     </tr>
                                 
                 </table>

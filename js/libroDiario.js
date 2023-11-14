@@ -43,7 +43,6 @@ function cargarLibroDiarioJS() {
               
         for (var j = 0; j < collRestaurar.length; j++) {
            console.log(collRestaurar[j]);
-           alert();
             //if(!collRestaurar[j].classList.contains("inabilitado")){
                 collRestaurar[j].addEventListener("click",restaurarPartida);
             //}
@@ -189,12 +188,15 @@ function guardarTransaccion(e) {
     var opAjax = "ingresoAsiento";
     var fn = completarGuardadoTransaccion;
 
+
     if (archivo != "Registro") {
         opAjax = "editarAsiento";
         fn = completarModificacionTransaccion;
 
         transaccion.partida = data.partida;
     }
+
+    console.log(transaccion);
 
     var url = "?o=" + btoa("request") + "&a=" + btoa(opAjax);
 
@@ -232,6 +234,11 @@ function completarGuardadoTransaccion(data) {
 
     seccionDebeGlobal.innerText = "$0.00";
     seccionHaberGlobal.innerText = "$0.00";
+
+    vDebe  = 0;
+    vHaber = 0;
+   
+    transaccion = {cuentas: []};
 
     resetPartida(null);
 }

@@ -327,13 +327,13 @@ padding: 0;
 .formCuentaStn{
     text-align: center;
     border:1px solid #ccc;
-    width: 60%;
+    width: 75%;
     border-radius: 5px;
     margin: auto;
     box-shadow: 1px 1px 15px #ccc;
     position: absolute;
     top:20%;
-    left:20%;
+    left:13%;
     z-index: 1000;
 }
 
@@ -423,6 +423,7 @@ section form.formCuenta#form input[type=text]:not(input[type=submit]):focus{
 
 select.selectForms{
     width: 140px;
+    width:90%;
     display: block;
 }
 
@@ -449,7 +450,7 @@ select.selectForms{
 }
 
 #form section label input{
-    width:150px;
+    width:200px;
     margin-top:0; 
 }
 

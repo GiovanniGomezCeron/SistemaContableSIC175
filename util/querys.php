@@ -30,7 +30,7 @@ ON sc.cuentaSecundaria = c.codigo");
 //SELECCIONAR rubros asociados
 define("SELECT_RUBROS_CONTABLES","SELECT id, subtipo FROM rubro_contable");
 
-define("SELECT_ELEMENTOS_CONTABLES","SELECT id,clasificacion FROM elemento_contable;");
+define("SELECT_ELEMENTOS_CONTABLES","SELECT id,clasificacion,codigo FROM elemento_contable;");
 
 //RUBROS CONTABLES POR ELEMENTO CONTABLE
 define("SELECT_RUBROS_ELEMENT_CONTABLE","SELECT rc.id idRubro, rc.subtipo rubro,c.elemento_contable FROM cuenta c 
@@ -183,4 +183,121 @@ INNER JOIN partida p ON p.idPartida = d.partida
 WHERE c.codigo = '1111'
 AND p.fecha = (SELECT MIN(p1.fecha) FROM partida p1)");
 
+
+define("OBTENER_ACTIVOS_FINALES","SELECT c.codigo,c.elemento_contable elemento,ec.clasificacion,c.nombre,
+CASE
+    WHEN SUM(dp.saldoDebe) > SUM(dp.saldoHaber) THEN
+        SUM(dp.saldoDebe) - SUM(dp.saldoHaber)
+      WHEN SUM(dp.saldoHaber) > SUM(dp.saldoDebe) THEN
+        SUM(dp.saldoHaber) -SUM(dp.saldoDebe)
+        ELSE
+            0
+      END AS saldo,rc.subtipo rubro
+    FROM cuenta c
+    INNER JOIN detalle_partida dp
+    ON dp.cuenta = c.codigo
+    INNER JOIN rubro_contable rc
+    ON rc.id = c.rubro
+    INNER JOIN elemento_contable ec 
+    ON ec.id = c.elemento_contable
+    GROUP BY c.codigo
+    HAVING c.elemento_contable = 1    
+    ORDER BY c.codigo;");
+
+define("OBTENER_PASIVOS_CAPITAL_FINALES","SELECT c.codigo,c.elemento_contable elemento,ec.clasificacion,c.nombre,
+CASE
+    WHEN SUM(dp.saldoDebe) > SUM(dp.saldoHaber) THEN
+        SUM(dp.saldoDebe) - SUM(dp.saldoHaber)
+      WHEN SUM(dp.saldoHaber) > SUM(dp.saldoDebe) THEN
+        SUM(dp.saldoHaber) -SUM(dp.saldoDebe)
+        ELSE
+            0
+      END AS saldo,
+    rc.subtipo rubro
+    FROM cuenta c
+    INNER JOIN detalle_partida dp
+    ON dp.cuenta = c.codigo
+    INNER JOIN rubro_contable rc
+    ON rc.id = c.rubro
+    INNER JOIN elemento_contable ec
+    ON ec.id = c.elemento_contable
+    GROUP BY ec.codigo, rc.subtipo
+    HAVING ec.codigo = 3 OR ec.codigo = 2
+    ORDER BY ec.codigo,rc.subtipo;");
+
+
+define("TOTALES_RUBRO_ACTIVO","SELECT ec.id,ec.clasificacion,rc.subtipo,
+CASE
+    WHEN SUM(dp.saldoDebe) > SUM(dp.saldoHaber) THEN
+        SUM(dp.saldoDebe) - SUM(dp.saldoHaber)
+      WHEN SUM(dp.saldoHaber) > SUM(dp.saldoDebe) THEN
+        SUM(dp.saldoHaber) -SUM(dp.saldoDebe)
+        ELSE
+            0
+      END AS saldo
+    FROM cuenta c
+    INNER JOIN detalle_partida dp
+    ON dp.cuenta = c.codigo
+    INNER JOIN rubro_contable rc
+    ON rc.id = c.rubro
+    INNER JOIN elemento_contable ec
+    ON ec.id = c.elemento_contable
+    GROUP BY rc.subtipo
+    HAVING ec.id = 1
+    ORDER BY ec.id,rc.subtipo;");
+
+  define("TOTALES_RUBRO_PASIVO","SELECT ec.id,ec.clasificacion,rc.subtipo,
+  CASE
+      WHEN SUM(dp.saldoDebe) > SUM(dp.saldoHaber) THEN
+          SUM(dp.saldoDebe) - SUM(dp.saldoHaber)
+        WHEN SUM(dp.saldoHaber) > SUM(dp.saldoDebe) THEN
+          SUM(dp.saldoHaber) -SUM(dp.saldoDebe)
+          ELSE
+              0
+        END AS saldo
+      FROM cuenta c
+      INNER JOIN detalle_partida dp
+      ON dp.cuenta = c.codigo
+      INNER JOIN rubro_contable rc
+      ON rc.id = c.rubro
+      INNER JOIN elemento_contable ec
+      ON ec.id = c.elemento_contable
+      GROUP BY ec.codigo,rc.subtipo
+      HAVING ec.id = 3 OR ec.id = 2
+      ORDER BY ec.id,rc.subtipo;");
+
+define("SELECCIONAR_TOTAL_ACTIVO_RUBRO","SELECT ec.codigo,c.nombre,ec.clasificacion,rc.subtipo, 
+                                         CASE WHEN SUM(dp.saldoDebe) > SUM(dp.saldoHaber) THEN 
+                                                SUM(dp.saldoDebe) - SUM(dp.saldoHaber) 
+                                              WHEN SUM(dp.saldoHaber) > SUM(dp.saldoDebe) THEN 
+                                                SUM(dp.saldoHaber) -SUM(dp.saldoDebe) 
+                                              ELSE 0 END AS saldo 
+                                              FROM cuenta c 
+                                              INNER JOIN detalle_partida dp 
+                                              ON dp.cuenta = c.codigo 
+                                              INNER JOIN rubro_contable rc 
+                                              ON rc.id = c.rubro 
+                                              INNER JOIN elemento_contable ec 
+                                              ON ec.id = c.elemento_contable 
+                                              GROUP BY c.nombre 
+                                              HAVING ec.codigo = 1 
+                                              ORDER BY ec.id,rc.subtipo;");
+
+define("SELECCIONAR_TOTAL_PASIVO_RUBRO","SELECT ec.codigo,c.nombre,ec.clasificacion,rc.subtipo, 
+                                         CASE WHEN SUM(dp.saldoDebe) > SUM(dp.saldoHaber) THEN 
+                                               SUM(dp.saldoDebe) - SUM(dp.saldoHaber) 
+                                             WHEN SUM(dp.saldoHaber) > SUM(dp.saldoDebe) THEN 
+                                               SUM(dp.saldoHaber) -SUM(dp.saldoDebe) 
+                                             ELSE 0 END AS saldo 
+                                             FROM cuenta c 
+                                             INNER JOIN detalle_partida dp 
+                                             ON dp.cuenta = c.codigo 
+                                             INNER JOIN rubro_contable rc 
+                                             ON rc.id = c.rubro 
+                                              INNER JOIN elemento_contable ec 
+                                              ON ec.id = c.elemento_contable 
+                                              GROUP BY c.nombre 
+                                              HAVING ec.codigo = 2 OR ec.codigo  = 3 
+                                              ORDER BY ec.id,rc.subtipo;");
 ?>
+
